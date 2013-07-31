@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Scala on IntelliJ</title>
+    <title>Groovy on IntelliJ</title>
   </head>
 </head>
 
@@ -18,7 +19,7 @@
    <div id="container">
      <div class="inner">
 	<header>
-	<h1>Scala with IntelliJ</h1>
+	<h1>Groovy with IntelliJ</h1>
 	<h2>Install to Hello World!</h2>
 	</header>
 	<hr>
@@ -29,11 +30,14 @@
 	<li>Mac</li>
 	<li>Java 6 or higher installed</li>
 	<li>IntelliJ 12 Ultimate installed</li>
+	<li>Groovy SDK downloaded (can be found
+		<a href="http://groovy.codehaus.org/Download">here</a>.)
+		</li>
 	</ul>
 	<p>Note: This guide is just an elaboration on / supplement for the guide 
-		<a href="http://confluence.jetbrains.com/display/IntelliJIDEA/Scala">here</a>.
+		<a href="http://confluence.jetbrains.com/display/IntelliJIDEA/Groovy">here</a>.
 		Work in progress. 
-		<a href="mailto:or.mindy+github_intellij_scala@gmail.com">
+		<a href="mailto:or.mindy+github_intellij_groovy@gmail.com">
 			E-mail</a> for comments/feedback (especially "what. clarify please").
 	</p>
 
@@ -43,36 +47,37 @@
 	<h3>1. Install Plugin</h3>
 	<ol>
 	<li>File > Other Settings > Configure Plugins ...</li>
-	<li>Make sure Scala plugin is selected, hit "Finish"</li>
+	<li>Make sure Groovy plugin is selected, hit "Finish"</li>
 	</ol>
 
-	<h3>2. Create Scala project with project wizard</h3>
+	<h3>2. Create Groovy project with project wizard</h3>
 	<ol>
 	<li>File > New Project</li>
-	<li>> Scala Module</li>
+	<li>> Groovy Module</li>
 	<li>Project Name: Name your project</li>
-	<li>Scala settings: select "Set Scala Home"</li>
-	<li>"Download Scala" - select one to "Download and Install"</li>
-	<li>Set path above to point to the Scala module you just downloaded/installed</li>
-	<li>Select "Make global libraries" to make your life easier in the future</li>
+	<li>"Next"</li>
+	<li>Please specify Groovy SDK: select in dropdown 
+		(or set path above to point to the Groovy SDK dir downloaded way back in "Assumptions")</li>
+	<li>"Finish"</li>
 	</ol>
 
-	<h3>3. Check project libraries</h3>
+	<h3>3. Create a new class</h3>
 	<ol>
-	<li>File > Project Structure</li>
-	<li>Modules: should have "Scala" under your new project name</li>
-	<li>Facets: should have "Scala"</li>
-	</ol>
-
-	<h3>4. Create object</h3>
-	<ol>
-	<li>In project view, right-click "src" folder > New > Scala class</li>
+	<li>In project view, right-click "src" folder > New > Groovy class</li>
 	<li>name your class (ex. "HelloWorldApp"), select "Object" in dropdown</li>
-	<pre><code>object HelloWorldApp{
-	def main(args: Array[String]) {
+	<pre><code>class GroovyApp{
+	void hello() {
 		print("Hello World!");
 	}
 }</code></pre>
+	</ol>
+
+	<h3>4. Create a new script</h3>
+	<ol>
+	<li>In project view, right-click "src" folder > New > Groovy Script</li>
+	<li>name your script (ex. "main"), select "Groovy Script" in dropdown</li>
+	<pre><code>app = new GroovyApp()
+app.hello()</code></pre>
 	</ol>
 
 	<h3>5. Run application</h3>
@@ -90,3 +95,4 @@
 </body>
 
 </html>
+
